@@ -7,7 +7,7 @@
 
 class Answer
 {
-protected:
+private:
 	char **answerNumbers;
 public:
 	Answer();

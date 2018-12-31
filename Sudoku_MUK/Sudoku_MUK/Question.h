@@ -1,13 +1,12 @@
 #pragma once
-#include "Answer.h"
 
-class Question : public Answer
+class Question
 {
 private:
-	char **questionNumbers;
 	char **resetNumbers;
 
 public:
+	char **questionNumbers;
 	Question();
 	char** Generate(char** answerNumbers, int numberOfBlank);
 	char** reset();

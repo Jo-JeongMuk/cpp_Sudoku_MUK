@@ -154,11 +154,13 @@
     <ClInclude Include="..\..\..\..\..\Downloads\cpp_sudoku_MUK-108_-\cpp_sudoku_MUK-108_-\Sudoku\Sudoku\Level.h" />
     <ClInclude Include="..\..\..\..\..\Downloads\cpp_sudoku_MUK-108_-\cpp_sudoku_MUK-108_-\Sudoku\Sudoku\Question.h" />
     <ClInclude Include="Answer.h" />
+    <ClInclude Include="Board.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\..\Downloads\cpp_sudoku_MUK-108_-\cpp_sudoku_MUK-108_-\Sudoku\Sudoku\Level.cpp" />
     <ClCompile Include="Answer.cpp" />
+    <ClCompile Include="Board.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
