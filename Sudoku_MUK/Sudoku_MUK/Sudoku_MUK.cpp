@@ -9,7 +9,7 @@ int main()
 	Level Level;
 	Question Question;
 	Question.Generate(Answer.Generate(), Level.Choose());
-	Board board;
+	Board board(Question.questionNumbers);
 	board.print(Question.questionNumbers);
 
 	return 0;

@@ -27,7 +27,7 @@ private:
 	  " ||9||   |   |   |   |   |   |   |   |   ||    ||                                        ||",
 	  " ++=++===========+===========+===========++    ++========================================++"};
 public:
-	Board();
-	void print(char **questionNumbers);
+	Board(char **questionNumbers);
+	void print(char **questionNumbers) const;
 	~Board();
 };
