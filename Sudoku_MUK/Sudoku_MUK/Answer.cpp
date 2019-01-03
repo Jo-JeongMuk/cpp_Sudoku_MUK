@@ -1,14 +1,11 @@
 #include "pch.h"
 #include "Answer.h"
-#include <fstream>
-#include <iostream>
-#include <string>
 
 using namespace std;
 
 Answer::Answer()
 {
-	answerNumbers = new char *[COLUME];
+	answerNumbers = new char *[COLUMN];
 	for (int i = 0; i < ROW; i++)
 		answerNumbers[i] = new char[ROW];
 }
@@ -41,9 +38,18 @@ char** Answer::Generate()
 	return answerNumbers;
 }
 
+bool Answer::CheckEndOfGame(char** questionNumbers) const
+{
+	for(int i = 0; i < COLUMN; ++i)
+		for(int j = 0; j < ROW; ++j)
+			if (questionNumbers[i][j] != answerNumbers[i][i])
+				return false;
+	return true;
+}
+
 Answer::~Answer()
 {
-	for (int i = 0; i < COLUME; i++)
+	for (int i = 0; i < COLUMN; i++)
 		delete[] answerNumbers[i];
 	delete answerNumbers;
 }

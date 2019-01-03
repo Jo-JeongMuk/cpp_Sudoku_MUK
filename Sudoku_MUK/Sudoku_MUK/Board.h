@@ -1,9 +1,12 @@
 #pragma once
+#include <ctime>
+#include <iostream>
+#include <Windows.h>
 
 class Board
 {
 private:
-	char board[BOARD_COLUME][BOARD_ROW] =
+	char board[BOARD_COLUMN][BOARD_ROW] =
 	{ "                                           ",
 	  " ++=++===========+===========+===========++",
 	  " || || 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 ||",
@@ -20,14 +23,16 @@ private:
 	  " ++-++-----------+-----------+-----------++    ||                                        ||",
 	  " ||6||   |   |   |   |   |   |   |   |   ||    ||             % User Option %            ||",
 	  " ++=++===========+===========+===========++    ||                                        ||",
-	  " ||7||   |   |   |   |   |   |   |   |   ||    ||  1. Delete number  : Row Coloum 0      ||",
-	  " ++-++-----------+-----------+-----------++    ||  2. Level reselect : Q                 ||",
-	  " ||8||   |   |   |   |   |   |   |   |   ||    ||  3. Reset          : W                 ||",
-	  " ++-++-----------+-----------+-----------++    ||  4. Exit           : E                 ||",
+	  " ||7||   |   |   |   |   |   |   |   |   ||    ||  『 Delete number  : Row Coloum 0      ||",
+	  " ++-++-----------+-----------+-----------++    ||  『 Level reselect : Q                 ||",
+	  " ||8||   |   |   |   |   |   |   |   |   ||    ||  『 Reset          : W                 ||",
+	  " ++-++-----------+-----------+-----------++    ||  『 Exit           : E                 ||",
 	  " ||9||   |   |   |   |   |   |   |   |   ||    ||                                        ||",
 	  " ++=++===========+===========+===========++    ++========================================++"};
 public:
-	Board(char **questionNumbers);
-	void print(char **questionNumbers) const;
+	Board();
+	void print(char **questionNumbers);
+	bool EndGame(clock_t start, clock_t end) const;
+	void GameOver() const;
 	~Board();
 };

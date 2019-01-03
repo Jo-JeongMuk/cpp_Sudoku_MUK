@@ -1,4 +1,9 @@
 #pragma once
+
+#include <fstream>
+#include <iostream>
+#include <string>
+
 #define GAMECOUNT 9
 #define FILEBUFFER 100
 #define KEY1 20
@@ -12,5 +17,6 @@ private:
 public:
 	Answer();
 	char** Generate();
+	bool CheckEndOfGame(char** questionNumbers) const;
 	~Answer();
 };

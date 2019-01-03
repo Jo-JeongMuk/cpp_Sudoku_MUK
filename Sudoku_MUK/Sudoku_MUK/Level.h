@@ -1,5 +1,8 @@
 #pragma once
 
+#include <iostream>
+#include <windows.h>
+
 #define LEVEL1 45
 #define LEVEL2 50
 #define LEVEL3 54

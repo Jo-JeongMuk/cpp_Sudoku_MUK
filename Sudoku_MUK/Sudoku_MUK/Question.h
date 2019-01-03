@@ -1,4 +1,7 @@
 #pragma once
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
 
 class Question
 {
@@ -9,6 +12,6 @@ public:
 	char **questionNumbers;
 	Question();
 	char** Generate(char** answerNumbers, int numberOfBlank);
-	char** reset();
+	void reset();
 	~Question();
 };

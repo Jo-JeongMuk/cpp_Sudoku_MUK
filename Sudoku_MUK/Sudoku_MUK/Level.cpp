@@ -1,7 +1,5 @@
 #include "pch.h"
 #include "Level.h"
-#include <iostream>
-#include <windows.h>
 
 using namespace std;
 
