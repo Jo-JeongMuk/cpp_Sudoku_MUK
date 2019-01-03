@@ -17,6 +17,5 @@ private:
 public:
 	Answer();
 	char** Generate();
-	bool CheckEndOfGame(char** questionNumbers) const;
 	~Answer();
 };

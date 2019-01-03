@@ -21,7 +21,7 @@ int main()
 		start = clock();
 
 		while(true) {
-			board.Print(question.questionNumbers);
+			board.Print(question.questionNumbers, question.setColors);
 			Input input;
 			if(input.reset_or_main == RETURN_TO_MAIN)
 				break;
@@ -29,13 +29,12 @@ int main()
 				question.reset();
 			else if(input.ExpectionCheck() == true && input.DuplicateCheck(question.questionNumbers) == true)
 				input.FillintheBlank(question.questionNumbers);
-			if (answer.CheckEndOfGame(question.questionNumbers)) {
+			if (input.CheckEndOfGame(question.questionNumbers)) {
 				end = clock();
 				if(board.EndGame(start, end))
 					break;
 			}
 		}
 	}
-
 	return 0;
 }

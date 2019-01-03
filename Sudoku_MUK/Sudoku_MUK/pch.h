@@ -10,6 +10,7 @@
 #define LIGHTGREEN 10
 #define RED 12
 #define WHITE 15
+#define YELLOW 6
 
 #define RETURN_TO_MAIN 1
 #define RESET_GAME 2

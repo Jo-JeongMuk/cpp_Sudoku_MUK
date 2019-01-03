@@ -21,9 +21,6 @@
     <ClInclude Include="Answer.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Downloads\cpp_sudoku_MUK-108_-\cpp_sudoku_MUK-108_-\Sudoku\Sudoku\Question.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Board.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
@@ -31,6 +28,9 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Level.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Question.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

@@ -6,59 +6,72 @@ using namespace std;
 Input::Input()
 : reset_or_main(0) {
 	cout << endl << "  Please Input Row Colume Value! : ";
-	cin >> _column;
-	if (_column == 'q' || _column == 'Q') {
+	cin >> column;
+	if (column == 'q' || column == 'Q') {
 		reset_or_main = RETURN_TO_MAIN;
 		return;
 	}
-	if (_column == 'w' || _column == 'W') {
+	if (column == 'w' || column == 'W') {
 		reset_or_main = RESET_GAME;
 		return;
 	}
-	if (_column == 'e' || _column == 'E') {
+	if (column == 'e' || column == 'E') {
 		Board gameover;
 		gameover.GameOver();
 	}
-	cin >> _row >> _value;
-	_column -= '1';
-	_row -= '1';
+	cin >> row >> value;
+	column -= '1';
+	row -= '1';
 }
 
-bool Input::ExpectionCheck()
+bool Input::ExpectionCheck() const
 {
-	if (_row < 0 || _row > 8 || _column < 0 || _column > 8 || _value < '0' || _value > '9')
+	if (row < 0 || row > 8 || column < 0 || column > 8 || value < '0' || value > '9')
 	{
 		cout << endl << "  It's whrong numbers. Please try again." << endl;
-		Sleep(1000);
+		Sleep(1500);
 		return false;
 	}
 	return true;
 }
 
-bool Input::DuplicateCheck(char **questionNumbers)
+bool Input::DuplicateCheck(char **questionNumbers) const
 {
-	if (questionNumbers[_column][_row] != '0')
-	{
-		cout << endl;
-		cout << "  There already have number. Please try again." << endl;
-		Sleep(1000);
-		return false;
-	}
-	if (_value != '0')
+	if (value == '0')
+		return true;
+	else
 		for (int i = 0; i < COLUMN; ++i)
-			if (questionNumbers[_column][i] == _value || questionNumbers[i][_row] == _value)
+			if (questionNumbers[column][i] == value || questionNumbers[i][row] == value)
 				return false;
 			else
 				for (int i = 0; i < 3; ++i)
-					if (questionNumbers[((_column / 3) * 3) + i][_row] == _value || questionNumbers[_column][((_row / 3) * 3) + i] == _value) {
-						cout << endl << "  There already have '" << _value << "'. Please try again." << endl;
-						Sleep(1000);
+					if (questionNumbers[((column/3)*3)+i][row] == value || questionNumbers[column][((row/3)*3)+i] == value) {
+						cout << endl << "  There already have '" << value << "'. Please try again." << endl;
+						Sleep(1500);
 						return false;
 					}
+
+	if (questionNumbers[column][row] != '0')
+	{
+		cout << endl;
+		cout << "  There already have number. Please try again." << endl;
+		Sleep(1500);
+		return false;
+	}
+
 	return true;
 }
 
 void Input::FillintheBlank(char **questionNumbers)
 {
-	questionNumbers[_column][_row] = _value;
+	questionNumbers[column][row] = value;
+}
+
+bool Input::CheckEndOfGame(char** questionNumbers) const
+{
+	for(int i = 0; i < COLUMN; ++i)
+		for(int j = 0; j < ROW; ++j)
+			if (questionNumbers[i][j] == '0')
+				return false;
+	return true;
 }

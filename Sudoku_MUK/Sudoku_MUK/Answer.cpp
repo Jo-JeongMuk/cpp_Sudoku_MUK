@@ -38,15 +38,6 @@ char** Answer::Generate()
 	return answerNumbers;
 }
 
-bool Answer::CheckEndOfGame(char** questionNumbers) const
-{
-	for(int i = 0; i < COLUMN; ++i)
-		for(int j = 0; j < ROW; ++j)
-			if (questionNumbers[i][j] != answerNumbers[i][i])
-				return false;
-	return true;
-}
-
 Answer::~Answer()
 {
 	for (int i = 0; i < COLUMN; i++)

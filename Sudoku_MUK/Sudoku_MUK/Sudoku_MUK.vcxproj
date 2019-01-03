@@ -151,12 +151,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Downloads\cpp_sudoku_MUK-108_-\cpp_sudoku_MUK-108_-\Sudoku\Sudoku\Question.h" />
     <ClInclude Include="Answer.h" />
     <ClInclude Include="Board.h" />
     <ClInclude Include="input.h" />
     <ClInclude Include="Level.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Question.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Answer.cpp" />

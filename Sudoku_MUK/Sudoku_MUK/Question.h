@@ -7,11 +7,11 @@ class Question
 {
 private:
 	char** resetNumbers;
-
 public:
 	char **questionNumbers;
+	bool** setColors;
 	Question();
-	char** Generate(char** answerNumbers, int numberOfBlank);
+	char** Generate(char** answerNumbers, const int numberOfBlank);
 	void reset();
 	~Question();
 };
