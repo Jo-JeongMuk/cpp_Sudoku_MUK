@@ -13,7 +13,7 @@ private:
 
 public:
 	Input();
-	int reset_or_main = 0;
+	int reset_or_main;
 	bool ExpectionCheck();
 	bool DuplicateCheck(char **questionNumbers);
 	void FillintheBlank(char **questionNumbers);

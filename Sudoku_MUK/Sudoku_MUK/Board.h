@@ -28,10 +28,12 @@ private:
 	  " ||8||   |   |   |   |   |   |   |   |   ||    ||  ¡Ø Reset          : W                 ||",
 	  " ++-++-----------+-----------+-----------++    ||  ¡Ø Exit           : E                 ||",
 	  " ||9||   |   |   |   |   |   |   |   |   ||    ||                                        ||",
-	  " ++=++===========+===========+===========++    ++========================================++"};
+	  " ++=++===========+===========+===========++    ++========================================++"
+	};
+//	bool** setColors;
 public:
 	Board();
-	void print(char **questionNumbers);
+	void Print(char **questionNumbers);
 	bool EndGame(clock_t start, clock_t end) const;
 	void GameOver() const;
 	~Board();

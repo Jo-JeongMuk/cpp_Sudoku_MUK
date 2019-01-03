@@ -3,17 +3,21 @@
 
 using namespace std;
 
-Board::Board() {}
+Board::Board() 
+{
+//	setColors = new bool*[COLUMN];
+//	for (int i = 0; i < COLUMN; i++)
+//		setColors[i] = new bool[ROW];
+}
 
-void Board::print(char **questionNumbers)
+void Board::Print(char **questionNumbers)
 {
 	for(int i = 0; i < COLUMN; ++i)
-		for(int j = 0; j < ROW; ++j){
+		for(int j = 0; j < ROW; ++j)
 			if(questionNumbers[i][j] == '0')
 				board[(i * 2) + 4][(j * 4) + 7] = ' ';
-			else 
+			else
 				board[(i * 2) + 4][(j * 4) + 7] = questionNumbers[i][j];
-		}
 	system("cls");
 	cout << endl << endl;
 

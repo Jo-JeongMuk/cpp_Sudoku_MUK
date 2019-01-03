@@ -21,7 +21,7 @@ int main()
 		start = clock();
 
 		while(true) {
-			board.print(question.questionNumbers);
+			board.Print(question.questionNumbers);
 			Input input;
 			if(input.reset_or_main == RETURN_TO_MAIN)
 				break;

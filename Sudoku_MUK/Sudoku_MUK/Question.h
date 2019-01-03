@@ -6,7 +6,7 @@
 class Question
 {
 private:
-	char **resetNumbers;
+	char** resetNumbers;
 
 public:
 	char **questionNumbers;
