@@ -32,7 +32,7 @@ private:
 	};
 public:
 	Board();
-	void Print(char **questionNumbers, bool **setColors);
+	void Print(char** questionNumbers, bool** setColors);
 	bool EndGame(const clock_t start, const clock_t end) const;
 	void GameOver() const;
 	~Board();

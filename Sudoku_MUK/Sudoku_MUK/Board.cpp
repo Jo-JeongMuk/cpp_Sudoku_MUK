@@ -5,7 +5,7 @@ using namespace std;
 
 Board::Board() {}
 
-void Board::Print(char **questionNumbers, bool **setColors)
+void Board::Print(char** questionNumbers, bool** setColors)
 {
 	for(int i = 0; i < COLUMN; ++i)
 		for(int j = 0; j < ROW; ++j)
@@ -21,8 +21,6 @@ void Board::Print(char **questionNumbers, bool **setColors)
 		for(int j = 0; j < BOARD_ROW; ++j) {
 			if (j < 6 || j == 29 || j == 17 || j == 41 || j == 42 || i < 4 || i == 9 || i == 15 || i == 21) 
 				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), MAGENTA);
-//			if (i < 4 || i == 9 || i == 15 || i == 21)
-//				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), MAGENTA);
 			if (j > 42) SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), RED);
 			if (j > 68 && (board[i][j] == 'Q' || board[i][j] == 'W' || board[i][j] == 'E'))
 				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), YELLOW);

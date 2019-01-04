@@ -35,7 +35,7 @@ bool Input::ExpectionCheck() const
 	return true;
 }
 
-bool Input::DuplicateCheck(char **questionNumbers) const
+bool Input::DuplicateCheck(char** questionNumbers) const
 {
 	if (value == '0')
 		return true;

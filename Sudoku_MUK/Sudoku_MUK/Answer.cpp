@@ -6,7 +6,7 @@ using namespace std;
 Answer::Answer()
 {
 	answerNumbers = new char *[COLUMN];
-	for (int i = 0; i < ROW; i++)
+	for (int i = 0; i < ROW; ++i)
 		answerNumbers[i] = new char[ROW];
 }
 
@@ -40,7 +40,7 @@ char** Answer::Generate()
 
 Answer::~Answer()
 {
-	for (int i = 0; i < COLUMN; i++)
+	for (int i = 0; i < COLUMN; ++i)
 		delete[] answerNumbers[i];
 	delete answerNumbers;
 }

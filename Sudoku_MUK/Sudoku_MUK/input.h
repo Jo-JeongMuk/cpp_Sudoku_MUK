@@ -15,7 +15,7 @@ public:
 	Input();
 	int reset_or_main;
 	bool ExpectionCheck() const;
-	bool DuplicateCheck(char **questionNumbers) const;
-	void FillintheBlank(char **questionNumbers);
+	bool DuplicateCheck(char** questionNumbers) const;
+	void FillintheBlank(char** questionNumbers);
 	bool CheckEndOfGame(char** questionNumbers) const;
 };

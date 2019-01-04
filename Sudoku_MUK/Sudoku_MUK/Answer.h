@@ -13,7 +13,7 @@
 class Answer
 {
 private:
-	char **answerNumbers;
+	char** answerNumbers;
 public:
 	Answer();
 	char** Generate();
