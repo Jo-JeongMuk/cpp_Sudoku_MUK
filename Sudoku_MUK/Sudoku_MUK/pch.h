@@ -14,5 +14,6 @@
 
 #define RETURN_TO_MAIN 1
 #define RESET_GAME 2
+#define EXIT_GAME 3
 
 #endif //PCH_H

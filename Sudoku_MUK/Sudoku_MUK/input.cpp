@@ -16,8 +16,8 @@ Input::Input()
 		return;
 	}
 	if (column == 'e' || column == 'E') {
-		Board gameover;
-		gameover.GameOver();
+		reset_or_main = EXIT_GAME;
+		return;
 	}
 	cin >> row >> value;
 	column -= '1';

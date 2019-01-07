@@ -27,6 +27,8 @@ int main()
 				break;
 			else if(input.reset_or_main == RESET_GAME)
 				question.reset();
+			else if(input.reset_or_main == EXIT_GAME)
+				return board.GameOver();
 			else if(input.ExpectionCheck() == true && input.DuplicateCheck(question.questionNumbers) == true)
 				input.FillintheBlank(question.questionNumbers);
 			if (input.CheckEndOfGame(question.questionNumbers)) {

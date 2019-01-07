@@ -56,7 +56,7 @@ bool Board::EndGame(const clock_t start,const clock_t end) const
 	exit(1);
 }
 
-void Board::GameOver() const
+int Board::GameOver() const
 {
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), RED);
 	cout << "               _____           __   ___ ______    ______       ________ _____  " << endl <<
@@ -66,7 +66,7 @@ void Board::GameOver() const
 			"             | |__| |/ ____ ¡¬|  |   | | |____  | |__| | ¡¬  /   | |____| |¡¬¡¬  " << endl <<
 			"             ¡¬_____/_/    ¡¬_¡¬_|   |_|______|  ¡¬____/  ¡¬/    |______|_| ¡¬_¡¬ " << endl;
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), WHITE);
-	exit(1);
+	return 0;
 }
 
 Board::~Board(){}
